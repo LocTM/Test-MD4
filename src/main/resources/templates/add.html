@@ -27,27 +27,27 @@
     <label><input type="text" th:field="*{id}" hidden></label>
     <div class="mb-3">
         <label for="name" class="form-label">Tên thành phố</label>
-        <input type="text" id="name" class="form-control" th:field="*{name}" >
+        <input type="text" id="name" class="form-control" th:field="*{name}" required>
         <p th:errors="*{name}" th:if="${#fields.hasErrors('name')}" class="text-danger"></p>
     </div>
     <div class="mb-3">
         <label for="area" class="form-label">Diện tích</label>
-        <input type="text" id="area" class="form-control"  th:field="*{area}">
+        <input type="number" min="1" id="area" class="form-control"  th:field="*{area}" required>
         <p th:errors="*{area}" th:if="${#fields.hasErrors('area')}" class="text-danger"></p>
     </div>
     <div class="mb-3">
         <label for="quantity" class="form-label">Dân số</label>
-        <input type="text" class="form-control" id="quantity" th:field="*{population}">
+        <input type="number" min="1" class="form-control" id="quantity" th:field="*{population}" required>
         <p th:errors="*{population}" th:if="${#fields.hasErrors('population')}" class="text-danger"></p>
     </div>
     <div class="mb-3">
         <label for="quantity" class="form-label">GDP</label>
-        <input type="text" class="form-control" id="GDP" th:field="*{GDP}">
+        <input ttype="number" min="1" class="form-control" id="GDP" th:field="*{GDP}" required>
         <p th:errors="*{GDP}" th:if="${#fields.hasErrors('GDP')}" class="text-danger"></p>
     </div>
     <div class="mb-3">
         <label for="quantity" class="form-label">Mô tả</label>
-        <input type="text" class="form-control" id="introduce" th:field="*{introduce}">
+        <input type="text" class="form-control" id="introduce" th:field="*{introduce}" required>
         <p th:errors="*{introduce}" th:if="${#fields.hasErrors('introduce')}" class="text-danger"></p>
     </div>
     <div class="mb-3">
